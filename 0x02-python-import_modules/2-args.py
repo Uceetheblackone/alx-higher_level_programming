@@ -2,6 +2,7 @@
 if __name__ == "__main__":
     """Print the number of and list of arguments."""
     import sys
+
     num_args = len(sys.argv) - 1
     if num_args == 0:
         print("0 arguments.")
@@ -9,5 +10,5 @@ if __name__ == "__main__":
         print("1 arguments:")
     else:
         print("{} arguments:".format(num_args))
-        for a in range(num_args):
-            print("{}: {}".format(a + 1, sys.argv[a + 1]))
+        for i in range(num_args):
+            print("{}: {}".format(i + 1, sys.argv[i + 1]))

@@ -2,10 +2,7 @@
 
 
 def no_c(my_string):
-    """removes all characters c and C from a string."""
-    new_string = []
-    for m in my_string:
-        if m != 'c' and m != 'C':
-            new_string.append(m)
-    return (''.join(new_string))
+    """Remove all characters c and C from a string."""
+    copy = [x for x in my_string if x != 'c' and x != 'C']
+    return ("".join(copy))
 

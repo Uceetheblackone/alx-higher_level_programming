@@ -7,5 +7,6 @@ def divisible_by_2(my_list=[]):
             mult.append(True)
         else:
             mult.append(False)
-    return mult
+
+    return (mult)
 

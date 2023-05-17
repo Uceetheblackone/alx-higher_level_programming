@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def subtract_sum_of_less_than_max(list_num):
+def subtract_sum(list_num):
     max_val = max(list_num)
     to_subtract = 0
 
@@ -29,11 +29,11 @@ def roman_to_int(roman_string):
         for roman_numeral in list_keys:
             if roman_numeral == index:
                 if roman_num.get(index)  <= prev_roman_num:
-                    result += subtract_sum_of_less_than_max(list_num)
+                    result += subtract_sum(list_num)
                     list_num = [roman_num.get(index)]
         else:
             list_num.append(roman_num.get(index))
         prev_roman_num = roman_num.get(index)
-    result += subtract_sum_of_less_than_max(list_num)    
+    result += subtract_sum(list_num)    
 
     return (result)

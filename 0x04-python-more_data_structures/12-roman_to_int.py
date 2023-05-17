@@ -1,8 +1,12 @@
 #!/usr/bin/python3
 def subtract_sum_of_less_than_max(list_num):
     max_val = max(list_num)
-    to_subtract = sum(filter(lambda x: x < max_val, list_num))
-    return max_val - to_subtract
+    to_subtract = 0
+
+    for a in list_num:
+        if max_val > a:
+            to_subtract += a
+    return (max_val - to_subtract)
 def roman_to_int(roman_string):
     """converts a Roman numeral to an integer."""
     if not type(roman_string) == str:

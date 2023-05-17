@@ -7,14 +7,20 @@ def subtract_sum_of_less_than_max(list_num):
         if max_val > a:
             to_subtract += a
     return (max_val - to_subtract)
+
+
 def roman_to_int(roman_string):
     """converts a Roman numeral to an integer."""
-    if not type(roman_string) == str:
+    if not isinstance(roman_string, str):
         return 0
     if not roman_string:
         return 0
+
+
     roman_num = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     list_keys = list(roman_num.keys())
+
+
     result = 0
     prev_roman_num = 0
     list_num = [0]

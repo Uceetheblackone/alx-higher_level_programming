@@ -3,7 +3,15 @@
 import sys
 
 def safe_print_integer_err(value):
+    """ 
+    # function that prints an integer.
+    # with value as any type.
+    # Safe_print_integer(int): prints with error message.
+    # Returns: true if value is printed correctly otherwise false.
+    """
+
     try:
+
         print("{:d}".format(value))
         return (True)
     except (TypeError, ValueError) as error:

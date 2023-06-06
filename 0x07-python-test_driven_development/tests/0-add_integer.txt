@@ -1,0 +1,55 @@
+This module serves as test file for 0-add_integer.py
+
+# check module exists
+>>> add_integer = __import__('0-add_integer').add_integer
+
+#check module docstring
+>>> m = __import__('0-add_integer').__doc__
+>>> len(m) > 1
+True
+
+#check function docstring
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> len(add_integer.__doc__) > 1
+True
+
+>>> add_integer(1,2)
+3
+
+>>> add_integer(30.5, 2)
+32
+
+>>> add_integer(2147483647, 2147483647)
+4294967294
+
+>>> add_integer(0)
+98
+
+>>> add_integer(-0)
+98
+
+>>> add_integer(2)
+100
+
+>>> add_integer("aba", 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+>>> add_integer(5, "bee")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+
+>>> add_integer(5, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer

@@ -3,6 +3,8 @@
 Function that contains the lookup function
 """
 
+
+
 def lookup(obj):
     """returns the list of available attributes and methods
     of an object"""

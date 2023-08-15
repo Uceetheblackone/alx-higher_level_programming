@@ -1,7 +1,13 @@
 #!/usr/bin/node
 
-const list = require('./100-data.js').list;
+const dict = require('./101-data.js').dict;
 
-const newList = list.map((value, index) => value * index);
-console.log(list);
-console.log(newList);
+const invertedDict = {};
+
+for (const key in dict) {
+  if (invertedDict[dict[key]] === undefined) {
+    invertedDict[dict[key]] = [];
+  }
+  invertedDict[dict[key]].push(key);
+}
+console.log(invertedDict);
